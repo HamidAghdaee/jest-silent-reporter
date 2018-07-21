@@ -19,17 +19,18 @@ class SilentReporter {
   }
 
   onTestResult(test, testResult) {
-    if (!testResult.skipped) {
-      if (testResult.failureMessage) {
-        this.stdio.log(testResult.failureMessage);
-      }
-      const didUpdate = this._globalConfig.updateSnapshot === 'all';
-      const snapshotStatuses = helpers.getSnapshotStatus(
-        testResult.snapshot,
-        didUpdate
-      );
-      snapshotStatuses.forEach(this.stdio.log);
-    }
+    //for now no need to output
+    //   if (!testResult.skipped) {
+    //     if (testResult.failureMessage) {
+    //       this.stdio.log(testResult.failureMessage);
+    //     }
+    //     const didUpdate = this._globalConfig.updateSnapshot === 'all';
+    //     const snapshotStatuses = helpers.getSnapshotStatus(
+    //       testResult.snapshot,
+    //       didUpdate
+    //     );
+    //     snapshotStatuses.forEach(this.stdio.log);
+    //   }
   }
 }
 
